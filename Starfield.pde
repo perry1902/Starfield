@@ -1,15 +1,17 @@
-//your code here
+Stuff bob= new Stuff();
 void setup()
 {
-	//your code here
+	size(500,500);
 }
 void draw()
 {
-	//your code here
+	background(0);
+	bob= new Stuff(); 
 }
 class NormalParticle
 {
-	//your code here
+	int myX, myY;
+	NormalParticle()
 }
 interface Particle
 {
