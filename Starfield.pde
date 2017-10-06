@@ -16,6 +16,7 @@ for (int i=0; i< bob.length; i++)
  		bob[i].move();
  		bob[i].show();
  	}
+
 }
 class NormalParticle
 {
@@ -25,7 +26,7 @@ class NormalParticle
  		myX=300;
  		myY=300;
  		theta=(Math.random()*(2*PI));
- 		speed=(Math.random()*5);
+ 		speed=(Math.random()*5)+1;
 
  	} 
  	void move()
@@ -35,7 +36,6 @@ class NormalParticle
  	}
  	void show()
  	{
- 		noStroke();
  		fill(250,160,5);
  		ellipse((float)myX,(float)myY,20,20);
  	}
@@ -44,9 +44,12 @@ interface Particle
 {
 	//your code here
 }
-class OddballParticle //uses an interface
+class OddballParticle implements Particle
 {
-	double dx,dy;
+	
+}
+{
+	int dx,dy;
 	OddballPaticle()
 	{
 		dx=250;
@@ -54,11 +57,17 @@ class OddballParticle //uses an interface
 	}
 	void move()
 	{
-		
+		dx=dx + (Math.random()*5)-2;
+		dy=dy + (Math.random()*5)-2;
+	}
+	void show()
+	{
+		fill(0,0,200);
+		rect(dx,dy,dx+50,dy+50);
 	}
 }
 class JumboParticle //uses inheritance
 {
 	//your code here
 }
-
+*/
